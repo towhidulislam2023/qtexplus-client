@@ -44,7 +44,7 @@ const BookedServices = () => {
 
     const delletAppiontment=(id)=>{
         console.log(id);
-        fetch(`http://localhost:5000/deleteappiontment/${id}`,{
+        fetch(`https://qtexplus-doctor-server.vercel.app/deleteappiontment/${id}`,{
             method:"DELETE"
         })
         .then(res=>res.json())
