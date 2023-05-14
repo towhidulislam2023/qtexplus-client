@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.setbg{
+    height: 80vh;
+    width: 100%;
+    background-image: url(./assets//bannarimg//bannar.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
