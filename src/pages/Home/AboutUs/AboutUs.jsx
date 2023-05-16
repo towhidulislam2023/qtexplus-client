@@ -8,7 +8,7 @@ const AboutUs = () => {
               <div className=''>
                 <div className='md:relative  p-4 '>
                     <img className='md:w-[60%]' src={hosimg} alt="" />
-                    <img className='w-[40%] border-8 border-white absolute -bottom-9 right-96' src={docimg} alt="" />
+                    <img className='w-[40%] hidden md:block border-8 border-white absolute -bottom-9 right-96' src={docimg} alt="" />
                     <div className='md:w-[50%] md:absolute top-0 -right-36'>
                         <h1 className="text-4xl font-semibold">About Qtex Plus</h1>
 

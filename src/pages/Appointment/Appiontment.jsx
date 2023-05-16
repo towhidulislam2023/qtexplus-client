@@ -41,16 +41,16 @@ const Appiontment = () => {
     }
     return (
         <div>
-            <div className="flex gap-10">
-                <div className="w-[50%] relative my-3">
-                    <img className=" h-full rounded-lg" src={doctorsData && doctorsData.image} alt="" />
-                    <div className="absolute top-1/2 right-2 rounded-lg bg-slate-500 text-white py-5 px-3 ">
-                        <h1 className="text-5xl">{doctorsData && doctorsData.doctorname}</h1>
+            <div className="flex flex-col md:flex-row gap-10">
+                <div className="md:w-[50%] mx-6 md:mx-0 relative my-3">
+                    <img className=" h-[50vh] md:h-full rounded-lg" src={doctorsData && doctorsData.image} alt="" />
+                    <div className="absolute bottom-0 md:top-1/2 right-2 rounded-lg bg-slate-500 text-white md:py-5 md:px-3 ">
+                        <h1 className="md:text-5xl text-3xl">{doctorsData && doctorsData.doctorname}</h1>
                         <p>{doctorsData && doctorsData.speciality}</p>
                     </div>
 
                 </div>
-                <div className="w-[50%]   px-12 my-3 bg-slate-200 py-10 rounded-lg">
+                <div className="md:w-[50%] mx-6 md:mx-0 px-12 my-3 bg-slate-200 py-10 rounded-lg">
                     <h1 className="text-4xl font-bold w-[85%]">WellCome To Our Hospital <span className="text-6xl font-extrabold text-amber-800">Qtex Plus</span></h1>
                     <h1 className="text-center text-3xl font-semibold my-2">Appiontment Form</h1>
                     <form className="my-10" onSubmit={handelAppiontmentFromdata}>

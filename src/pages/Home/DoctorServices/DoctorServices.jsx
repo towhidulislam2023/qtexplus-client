@@ -15,7 +15,7 @@ const DoctorServices = () => {
             <h1 className="text-5xl font-bold">Explore Our Doctors Services</h1>
             <div className="divider"></div>
             {
-                doctorServices ? <div className="grid grid-cols-3 gap-7">
+                doctorServices ? <div className="grid grid-cols-1 md:grid-cols-3 gap-7 px-6">
                     {
                         doctorServices && doctorServices.map(service => <div key={service._id} className=" border  items-center p-4">
                             <div className="relative">
