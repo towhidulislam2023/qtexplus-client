@@ -44,7 +44,7 @@ const Appiontment = () => {
             <div className="flex flex-col md:flex-row gap-10">
                 <div className="md:w-[50%] mx-6 md:mx-0 relative my-3">
                     <img className=" h-[50vh] md:h-full rounded-lg" src={doctorsData && doctorsData.image} alt="" />
-                    <div className="absolute bottom-0 md:top-1/2 right-2 rounded-lg bg-slate-500 text-white md:py-5 md:px-3 ">
+                    <div className="absolute -my-10 md:top-1/2 right-2 rounded-lg bg-slate-500 text-white py-5 px-3 ">
                         <h1 className="md:text-5xl text-3xl">{doctorsData && doctorsData.doctorname}</h1>
                         <p>{doctorsData && doctorsData.speciality}</p>
                     </div>

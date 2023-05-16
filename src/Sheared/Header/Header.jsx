@@ -32,30 +32,52 @@ const Header = () => {
                         <li><Link className="text-xl font-semibold" to={""}>About</Link></li>
                         <li><Link className="text-xl font-semibold" to={""}>Contact Us</Link></li>
                         <li><Link className="text-xl font-semibold" to={"/bookedAppiontment"}>Your Appointment</Link></li>
-                       
+                       <li>
+                            {
+                                user ? <div className="dropdown dropdown-bottom dropdown-left dropdown-content  ">
+                                    <label tabIndex={0} className=" m-1"><div className="avatar placeholder">
+                                        <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+
+                                            {
+                                                user.photoURL ? <img src={user.photoURL} alt="" /> : <span>Qtex</span>
+                                            }
+
+                                        </div>
+                                    </div> </label>
+                                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow  rounded-box w-52 bg-slate-200">
+                                        <li><Link>Profile</Link></li>
+                                        <li><button onClick={handelLogOut} className="btb btn-warning">Log Out</button></li>
+                                    </ul>
+                                </div> : <Link className="btn btn-error px-5 py-0" to={"/login"}>Login</Link>
+                            }
+                       </li>
                      
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <div className=" md:hidden divider divider-horizontal"></div>
-                    {
-                        user ? <div className="dropdown dropdown-left dropdown-content  md:hidden">
-                            <label tabIndex={0} className=" m-1"><div className="avatar placeholder">
-                                <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+                  <div className="hidden md:block">
+                    <a className="btn btn-warning ">Get started</a>
+                  </div>
+                  <div className="md:hidden">
+                        {
+                            user ? <div className="dropdown dropdown-bottom dropdown-left dropdown-content  ">
+                                <label tabIndex={0} className=" m-1"><div className="avatar placeholder">
+                                    <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
 
-                                    {
-                                        user.photoURL ? <img src={user.photoURL} alt="" /> : <span>Qtex</span>
-                                    }
+                                        {
+                                            user.photoURL ? <img src={user.photoURL} alt="" /> : <span>Qtex</span>
+                                        }
 
-                                </div>
-                            </div> </label>
-                            <ul tabIndex={0} className="dropdown-content menu p-2 shadow  rounded-box w-52 bg-slate-200">
-                                <li><Link>Profile</Link></li>
-                                <li><button onClick={handelLogOut} className="btb btn-warning">Log Out</button></li>
-                            </ul>
-                        </div> : <Link className="btn btn-error px-5 py-0" to={"/login"}>Login</Link>
-                    }
-                    <a className="btn btn-warning hidden md:block">Get started</a>
+                                    </div>
+                                </div> </label>
+                                <ul tabIndex={0} className="dropdown-content menu p-2 shadow  rounded-box w-52 bg-slate-200">
+                                    <li><Link>Profile</Link></li>
+                                    <li><button onClick={handelLogOut} className="btb btn-warning">Log Out</button></li>
+                                </ul>
+                            </div> : <Link className="btn btn-error px-5 py-0" to={"/login"}>Login</Link>
+                        }
+                  </div>
                 </div>
             </div>
         </div>
